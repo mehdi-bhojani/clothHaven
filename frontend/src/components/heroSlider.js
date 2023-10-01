@@ -1,9 +1,22 @@
-import React, { useEffect } from 'react';
-import Swiper from 'swiper';
-import 'swiper/css'; // Import Swiper styles
+import { Navigation, Pagination, Scrollbar, A11y,Autoplay } from 'swiper/modules';
+import SwiperCore from 'swiper'
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
+
+
+SwiperCore.use([Autoplay]);
+// Import Swiper styles
+
+
+
 
 function HeroSlider() {
-    useEffect(() => {
+   /*  useEffect(() => {
       // Initialize Swiper when the component mounts
       new Swiper('.swiper', {
         // Swiper configuration options here
@@ -13,13 +26,29 @@ function HeroSlider() {
           prevEl: '.swiper-button-prev',
         },
       });
-    }, []); // Empty dependency array to run this effect only once
+    }, []); // Empty dependency array to run this effect only once */
 
     return (
-      <section className="hero__slider--section color-scheme-2">
-        <div className="hero__slider--inner hero__slider--activation swiper">
-          <div className="hero__slider--wrapper swiper-wrapper">
-          <div className="swiper-slide ">
+      /*  */
+     <div>
+     <Swiper
+      // install Swiper modules
+      modules={[Navigation, Pagination, Scrollbar, A11y,Autoplay]}
+      spaceBetween={10}
+      slidesPerView={1}
+      loop={true} // Enable loop
+      autoplay={{
+        "delay": 2000,
+        "disableOnInteraction": false
+      }}
+      speed={1500}
+      navigation
+   
+     
+      onSwiper={(swiper) => console.log(swiper)}
+      onSlideChange={() => console.log('slide change')}
+    >
+      <SwiperSlide><div className="swiper-slide ">
                   <div className="hero__slider--items home2__slider--bg">
                     <div className="container-fluid">
                       <div className="hero__slider--items__inner hero__slider--bg2__inner">
@@ -41,8 +70,8 @@ function HeroSlider() {
                       </div>
                     </div>
                   </div>
-                </div>
-                <div className="swiper-slide ">
+                </div></SwiperSlide>
+      <SwiperSlide>  <div className="swiper-slide ">
                   <div className="hero__slider--items home2__slider--bg two">
                     <div className="container-fluid">
                       <div className="hero__slider--items__inner hero__slider--bg2__inner">
@@ -60,8 +89,8 @@ function HeroSlider() {
                       </div>
                     </div>
                   </div>
-                </div>
-                <div className="swiper-slide ">
+                </div></SwiperSlide>
+      <SwiperSlide> <div className="swiper-slide ">
                   <div className="hero__slider--items home2__slider--bg three">
                     <div className="container-fluid">
                       <div className="hero__slider--items__inner hero__slider--bg2__inner">
@@ -79,12 +108,16 @@ function HeroSlider() {
                       </div>
                     </div>
                   </div>
-                </div>
-          </div>
-          <div className="swiper-button-next swiper__nav--btn" />
-          <div className="swiper-button-prev swiper__nav--btn" />
-        </div>
-      </section>
+                </div></SwiperSlide>
+     
+      
+
+      
+
+
+
+    </Swiper>
+     </div>
     );
   }
 
