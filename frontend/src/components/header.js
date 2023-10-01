@@ -16,34 +16,17 @@ const Header = () => {
                       <a className="language__switcher text-white" href="#">
                         <img className="language__switcher--icon__img" src="assets/img/icon/language-icon.png" alt="currency" />
                         <span>English</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="11.797" height="9.05" viewBox="0 0 9.797 6.05">
-                          <path d="M14.646,8.59,10.9,12.329,7.151,8.59,6,9.741l4.9,4.9,4.9-4.9Z" transform="translate(-6 -8.59)" fill="currentColor" opacity="0.7" />
-                        </svg>
+                
                       </a>
-                      <div className="dropdown__language">
-                        <ul>
-                          <li className="language__items"><a className="language__text" href="#">France</a></li>
-                          <li className="language__items"><a className="language__text" href="#">Russia</a></li>
-                          <li className="language__items"><a className="language__text" href="#">Spanish</a></li>
-                        </ul>
-                      </div>
+                   
                     </li>
                     <li className="language__currency--list">
                       <a className="account__currency--link text-white" href="#">
                         <img src="assets/img/icon/usd-icon.png" alt="currency" />
                         <span>$ US Dollar</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="11.797" height="9.05" viewBox="0 0 9.797 6.05">
-                          <path d="M14.646,8.59,10.9,12.329,7.151,8.59,6,9.741l4.9,4.9,4.9-4.9Z" transform="translate(-6 -8.59)" fill="currentColor" opacity="0.7" />
-                        </svg>
+                      
                       </a>
-                      <div className="dropdown__currency">
-                        <ul>
-                          <li className="currency__items"><a className="currency__text" href="#">CAD</a></li>
-                          <li className="currency__items"><a className="currency__text" href="#">CNY</a></li>
-                          <li className="currency__items"><a className="currency__text" href="#">EUR</a></li>
-                          <li className="currency__items"><a className="currency__text" href="#">GBP</a></li>
-                        </ul>
-                      </div>
+                     
                     </li>
                   </ul>
                 </div>

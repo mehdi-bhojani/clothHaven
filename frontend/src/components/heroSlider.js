@@ -16,20 +16,11 @@ SwiperCore.use([Autoplay]);
 
 
 function HeroSlider() {
-   /*  useEffect(() => {
-      // Initialize Swiper when the component mounts
-      new Swiper('.swiper', {
-        // Swiper configuration options here
-        // For example, to enable navigation buttons:
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
-      });
-    }, []); // Empty dependency array to run this effect only once */
+   
 
     return (
-      /*  */
+      /*  <div className="swiper-button-next swiper__nav--btn" />
+          <div className="swiper-button-prev swiper__nav--btn" /> */
      <div>
      <Swiper
       // install Swiper modules
@@ -43,7 +34,7 @@ function HeroSlider() {
       }}
       speed={1500}
       navigation
-   
+     
      
       onSwiper={(swiper) => console.log(swiper)}
       onSlideChange={() => console.log('slide change')}
@@ -112,11 +103,12 @@ function HeroSlider() {
      
       
 
-      
+          
 
 
 
     </Swiper>
+   
      </div>
     );
   }
