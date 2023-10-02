@@ -2,9 +2,12 @@
 import Header from './components/header';
 import Footer from './components/footer';
 import Shop from './pages/Shop';
+import WishList from './pages/WishList';
 import ScroolBar from './components/scroolbar';
 import NewsLetter from './components/newsletter';
 import Home from './pages/home';
+import Account from './pages/MyAccount';
+import Contact from './pages/Contact';
 import {BrowserRouter, Route,Routes,Link} from 'react-router-dom';
 import React from 'react';
 
@@ -104,16 +107,21 @@ function App() {
                       </a>
                     </li>
                     <li className="header__account--items header__account2--items">
+                    <Link to="/Account">
                       <a className="header__account--btn" href="my-account.html">
+                        
                         <svg xmlns="http://www.w3.org/2000/svg" width="26.51" height="23.443" viewBox="0 0 512 512"><path d="M344 144c-3.92 52.87-44 96-88 96s-84.15-43.12-88-96c-4-55 35-96 88-96s92 42 88 96z" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={32} /><path d="M256 304c-87 0-175.3 48-191.64 138.6C62.39 453.52 68.57 464 80 464h352c11.44 0 17.62-10.48 15.65-21.4C431.3 352 343 304 256 304z" fill="none" stroke="currentColor" strokeMiterlimit={10} strokeWidth={32} /></svg>
                         <span className="visually-hidden">Account</span>
                       </a>
+                      </Link>
                     </li>
                     <li className="header__account--items header__account2--items d-none d-lg-block">
+                    <Link to="/WishList">
                       <a className="header__account--btn" href="wishlist.html">
                         <svg xmlns="http://www.w3.org/2000/svg" width="28.51" height="23.443" viewBox="0 0 512 512"><path d="M352.92 80C288 80 256 144 256 144s-32-64-96.92-64c-52.76 0-94.54 44.14-95.08 96.81-1.1 109.33 86.73 187.08 183 252.42a16 16 0 0018 0c96.26-65.34 184.09-143.09 183-252.42-.54-52.67-42.32-96.81-95.08-96.81z" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={32} /></svg>
                         <span className="items__count  wishlist style2">02</span>
                       </a>
+                      </Link>
                     </li>
                     <li className="header__account--items header__account2--items">
                       <a className="header__account--btn minicart__open--btn" href="" data-offcanvas>
@@ -142,6 +150,9 @@ function App() {
       <Routes>
                         <Route path='/' element={ <Home></Home> }/>
                         <Route path='/Shop' element={  <Shop></Shop>}/>
+                        <Route path='/Contact' element={  <Contact></Contact>}/>
+                        <Route path='/Account' element={  <Account></Account>}/>
+                        <Route path='/WishList' element={ <WishList ></WishList>}/>
                       </Routes> 
     
       <Footer />
