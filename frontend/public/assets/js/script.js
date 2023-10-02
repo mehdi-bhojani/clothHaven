@@ -490,6 +490,7 @@ activeClassAction(
 activeClassAction(".footer__language--link", ".footer__dropdown--language");
 activeClassAction(".footer__currency--link", ".footer__dropdown--currency");
 
+
 // OffCanvas Sidebar Activation
 function offcanvsSidebar(openTrigger, closeTrigger, wrapper) {
   let OpenTriggerprimary__btn = document.querySelectorAll(openTrigger);
