@@ -1,11 +1,19 @@
 import React, { useEffect } from 'react';
-import Swiper from 'swiper';
-import 'swiper/css'; // Import Swiper styles
+
+import { Navigation, Pagination, Scrollbar, A11y,Autoplay } from 'swiper/modules';
+import SwiperCore from 'swiper'
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
 
 
 
 function MiniSlider() {
-  useEffect(() => {
+ /*  useEffect(() => {
     // Initialize Swiper when the component mounts
     new Swiper('.blog__swiper--activation', {
       slidesPerView: 5,
@@ -19,17 +27,28 @@ function MiniSlider() {
         clickable: true,
       },
     });
-  }, []); // Empty dependency array to run this effect only once
+  }, []); // Empty dependency array to run this effect only once */
 
   return (
-    <section className="blog__section section--padding color-scheme-2 pt-0">
-      <div className="container-fluid">
-        <div className="section__heading text-center mb-40">
-          <h2 className="section__heading--maintitle style2">From The Blog</h2>
-        </div>
-        <div className="blog__section--inner blog__swiper--activation swiper">
-          <div className="swiper-wrapper">
-            <div className="swiper-slide">
+<div>
+<Swiper
+    // install Swiper modules
+    modules={[Navigation, Pagination, Scrollbar, A11y]}
+    spaceBetween={60}
+    slidesPerView={4}
+  
+    
+    speed={1000}
+    navigation
+   
+   
+    onSwiper={(swiper) => console.log(swiper)}
+    onSlideChange={() => console.log('slide change')}
+  >
+
+
+<SwiperSlide>
+<div className="swiper-slide">
               <div className="blog__items">
                 <div className="blog__thumbnail">
                   <a className="blog__thumbnail--link" href="blog-details.html">
@@ -45,8 +64,12 @@ function MiniSlider() {
                 </div>
               </div>
             </div>
-            <div className="swiper-slide">
-              <div className="blog__items">
+
+</SwiperSlide>
+
+<SwiperSlide>
+<div className="swiper-slide">
+              <div className="blog__items two">
                 <div className="blog__thumbnail">
                   <a className="blog__thumbnail--link" href="blog-details.html">
                     <img className="blog__thumbnail--img" src="assets/img/blog/blog2.png" alt="blog-img" />
@@ -61,8 +84,12 @@ function MiniSlider() {
                 </div>
               </div>
             </div>
-            <div className="swiper-slide">
-              <div className="blog__items">
+
+</SwiperSlide>
+
+<SwiperSlide>
+<div className="swiper-slide">
+              <div className="blog__items three">
                 <div className="blog__thumbnail">
                   <a className="blog__thumbnail--link" href="blog-details.html">
                     <img className="blog__thumbnail--img" src="assets/img/blog/blog3.png" alt="blog-img" />
@@ -77,8 +104,13 @@ function MiniSlider() {
                 </div>
               </div>
             </div>
-            <div className="swiper-slide">
-              <div className="blog__items">
+
+</SwiperSlide>
+
+
+<SwiperSlide>
+<div className="swiper-slide">
+              <div className="blog__items four">
                 <div className="blog__thumbnail">
                   <a className="blog__thumbnail--link" href="blog-details.html">
                     <img className="blog__thumbnail--img" src="assets/img/blog/blog4.png" alt="blog-img" />
@@ -93,8 +125,12 @@ function MiniSlider() {
                 </div>
               </div>
             </div>
-            <div className="swiper-slide">
-              <div className="blog__items">
+
+</SwiperSlide>
+
+<SwiperSlide>
+<div className="swiper-slide">
+              <div className="blog__items five">
                 <div className="blog__thumbnail">
                   <a className="blog__thumbnail--link" href="blog-details.html">
                     <img className="blog__thumbnail--img" src="assets/img/blog/blog2.png" alt="blog-img" />
@@ -109,13 +145,13 @@ function MiniSlider() {
                 </div>
               </div>
             </div>
-          </div>
-          <div className="swiper-button-next swiper__nav--btn" />
-          <div className="swiper-button-prev swiper__nav--btn" />
-          <div className="swiper-pagination" />
-        </div>
-      </div>
-    </section>
+
+</SwiperSlide>
+
+</Swiper>
+
+</div>
+  
   );
 }
 
