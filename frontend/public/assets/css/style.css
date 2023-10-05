@@ -1,4 +1,7 @@
 @charset "UTF-8";
+/* src/index.css or src/App.css */
+@import "~font-awesome/css/font-awesome.min.css";
+
 /*
   Template Name: Suruchi - Fashion eCommerce HTML Template
   Author Name: Hook theme
@@ -6,7 +9,7 @@
   Version: 1.0.0
 
   ----------------------------
-  [Table of contents CSS] 
+  [Table of contents CSS]
   ----------------------------
 
     1. Base CSS
@@ -14,7 +17,7 @@
     3. Slider css
     4. Product card css
     5. Banner css
-    6. Blog css 
+    6. Blog css
     7. Testimonial css
     8. Featured services css
     9. Footer css
@@ -3865,8 +3868,8 @@ input[type="number"]::-webkit-outer-spin-button {
   }
 }
 
-/* 
-    3. Slider css 
+/*
+    3. Slider css
 */
 .home1__slider--bg {
   background: url(../img/slider/home1-slider1.png);
@@ -4223,8 +4226,8 @@ input[type="number"]::-webkit-outer-spin-button {
   padding-left: 0;
 }
 
-/* 
-    4. Product card css 
+/*
+    4. Product card css
 */
 .swiper:hover .swiper__nav--btn {
   opacity: 1;
@@ -4859,7 +4862,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 /*
-   5. Banner css 
+   5. Banner css
 */
 .banner__items--thumbnail {
   display: block;
@@ -6097,8 +6100,8 @@ input[type="number"]::-webkit-outer-spin-button {
   }
 }
 
-/* 
-    6. Blog css 
+/*
+    6. Blog css
 */
 .blog__items:hover .blog__thumbnail--img {
   -webkit-transform: scale(1.05);
@@ -6257,7 +6260,7 @@ input[type="number"]::-webkit-outer-spin-button {
   }
 }
 
-/* 
+/*
     7. Testimonial css
 */
 @media only screen and (max-width: 767px) {
@@ -12675,7 +12678,7 @@ details > summary::-webkit-details-marker {
   }
 }
 
-/* 
+/*
     29. Newsletter popup css
 */
 /* ANIMATIONS
