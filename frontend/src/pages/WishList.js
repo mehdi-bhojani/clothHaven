@@ -1,21 +1,12 @@
 import React, { useState, useEffect } from "react";
 import MiniSlider from "../components/miniSlider";
 import Product from "../components/wishList/product";
-import { cartProducts as initialCartProducts } from "../json/cartProductJson"; // Rename the imported variable
-
+import  newProducts from "../json/newProducts"; // Rename the imported variable
+import { useWishListContext } from "../components/contexts/wishListContext";
+import { removeFromLocalStorageArray } from "../functions";
 
 export default function MyWishList() {
-    const [wishlistProducts, setWishlistProducts] = useState(initialCartProducts); // Use a different name for the local state
-
-    const removeFromCartProducts = (productId) => {
-        console.log(`Removing product with ID: ${productId}`);
-        const updatedWishlistProducts = wishlistProducts.filter((product) => product.productId !== productId);
-        console.log(updatedWishlistProducts); // Log the updated products array
-        setWishlistProducts(updatedWishlistProducts);
-    };
-
-
-
+    const { wishListData, setWishListData } = useWishListContext();
 
     return (
         <main className="main__content_wrapper">
@@ -66,17 +57,16 @@ export default function MyWishList() {
                                         </tr>
                                     </thead>
                                     <tbody className="cart__table--body">
-                                        {wishlistProducts.map((elem) => (
+                                        {wishListData.map((elem) => (
                                             <Product
                                                 key={elem.productId} // Use "productId" here
-                                                productName={elem.productName}
-                                                productImage={elem.productImage}
+                                                productName={elem.title}
+                                                productImage={elem.primaryImage}
                                                 productDetailsLink={elem.productDetailsLink}
-                                                productColor={elem.productColor}
-                                                productWeight={elem.productWeight}
-                                                productPrice={elem.productPrice}
+                                                productColor={elem.subtitle}
+                                                productPrice={elem.currentPrice}
                                                 productAvailability={elem.productAvailability}
-                                                onRemove={() => removeFromCartProducts(elem.productId)} // Use "productId" here
+                                                onRemove={() => removeFromLocalStorageArray(elem.productId,setWishListData)} // Use "productId" here
                                             />
                                         ))}
 
@@ -105,20 +95,8 @@ export default function MyWishList() {
                         <h2 class="section__heading--maintitle">New Products</h2>
                     </div>
 
-                    <MiniSlider
-                        productDetailsLink="product-details.html"
-                        primaryImage="assets/img/product/product1.png"
-                        secondaryImage="assets/img/product/product2.png"
-                        badgeText="Sale"
-                        subtitle="Jacket, Women"
-                        title="Oversize Cotton Dress"
-                        currentPrice="$110"
-                        oldPrice="$78"
-                        rating={3} // Example rating value
-                        addToCartLink="cart.html"
-                        wishlistLink="wishlist.html"
-                        quickViewLink="javascript:void(0)"
-                    />
+                        <MiniSlider />
+
                 </div>
             </section>
             {/* End product section */}

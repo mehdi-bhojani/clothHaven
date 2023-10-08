@@ -1,4 +1,3 @@
-
 import Header from './components/header';
 import Footer from './components/footer';
 import Shop from './pages/Shop';
@@ -8,42 +7,44 @@ import NewsLetter from './components/newsletter';
 import Home from './pages/home';
 import Account from './pages/MyAccount';
 import Contact from './pages/Contact';
-import {BrowserRouter, Route,Routes,Link} from 'react-router-dom';
-import React from 'react';
-
+import { BrowserRouter, Route, Routes, Link } from 'react-router-dom';
+import { React, useState, useEffect } from 'react';
 
 function App() {
+
+  const wishlistCount = 0;
+
   return (
     <div>
-        <div className="header__topbar bg__secondary">
-            <div className="container-fluid">
-              <div className="header__topbar--inner d-flex align-items-center justify-content-between">
-                <div className="header__shipping">
-                  <p className="header__shipping--text text-white">Free shipping for orders over $59 !</p>
-                </div>
-                <div className="language__currency d-none d-lg-block">
-                  <ul className="d-flex align-items-center">
-                    <li className="header__shipping--text text-white"><img className="header__shipping--text__icon" src="assets/img/icon/bus.png" alt="bus-icon" /> Track Your Order</li>
-                    <li className="language__currency--list">
-                      <a className="language__switcher text-white" href="#">
-                        <img className="language__switcher--icon__img" src="assets/img/icon/language-icon.png" alt="currency" />
-                        <span>English</span>
-                      </a>
+      <div className="header__topbar bg__secondary">
+        <div className="container-fluid">
+          <div className="header__topbar--inner d-flex align-items-center justify-content-between">
+            <div className="header__shipping">
+              <p className="header__shipping--text text-white">Free shipping for orders over $59 !</p>
+            </div>
+            <div className="language__currency d-none d-lg-block">
+              <ul className="d-flex align-items-center">
+                <li className="header__shipping--text text-white"><img className="header__shipping--text__icon" src="assets/img/icon/bus.png" alt="bus-icon" /> Track Your Order</li>
+                <li className="language__currency--list">
+                  <a className="language__switcher text-white" href="#">
+                    <img className="language__switcher--icon__img" src="assets/img/icon/language-icon.png" alt="currency" />
+                    <span>English</span>
+                  </a>
 
-                    </li>
-                    <li className="language__currency--list">
-                      <a className="account__currency--link text-white" href="#">
-                        <img src="assets/img/icon/usd-icon.png" alt="currency" />
-                        <span>$ US Dollar</span>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
+                </li>
+                <li className="language__currency--list">
+                  <a className="account__currency--link text-white" href="#">
+                    <img src="assets/img/icon/usd-icon.png" alt="currency" />
+                    <span>$ US Dollar</span>
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
-       <BrowserRouter>
-       <div>
+        </div>
+      </div>
+      <BrowserRouter>
+        <div>
 
           <div className="main__header header__sticky">
             <div className="container-fluid">
@@ -64,19 +65,19 @@ function App() {
 
 
                       <li className="header__menu--items">
-                      <Link to="/">
-                        <a className="header__menu--link" href="index.html">Home
+                        <Link to="/">
+                          <a className="header__menu--link" href="index.html">Home
 
-                        </a>
+                          </a>
                         </Link>
 
                       </li>
 
 
                       <li className="header__menu--items mega__menu--items">
-                      <Link to="/Shop">
-                        <a className="header__menu--link" href="shop.html">Shop
-                        </a>
+                        <Link to="/Shop">
+                          <a className="header__menu--link" href="shop.html">Shop
+                          </a>
                         </Link>
                       </li>
 
@@ -84,8 +85,8 @@ function App() {
 
 
                       <li className="header__menu--items">
-                      <Link to="/Contact">
-                        <a className="header__menu--link" href="contact.html">Contact </a>
+                        <Link to="/Contact">
+                          <a className="header__menu--link" href="contact.html">Contact </a>
                         </Link>
                       </li>
 
@@ -104,20 +105,20 @@ function App() {
                       </a>
                     </li>
                     <li className="header__account--items header__account2--items">
-                    <Link to="/Account">
-                      <a className="header__account--btn" href="my-account.html">
+                      <Link to="/Account">
+                        <a className="header__account--btn" href="my-account.html">
 
-                        <svg xmlns="http://www.w3.org/2000/svg" width="26.51" height="23.443" viewBox="0 0 512 512"><path d="M344 144c-3.92 52.87-44 96-88 96s-84.15-43.12-88-96c-4-55 35-96 88-96s92 42 88 96z" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={32} /><path d="M256 304c-87 0-175.3 48-191.64 138.6C62.39 453.52 68.57 464 80 464h352c11.44 0 17.62-10.48 15.65-21.4C431.3 352 343 304 256 304z" fill="none" stroke="currentColor" strokeMiterlimit={10} strokeWidth={32} /></svg>
-                        <span className="visually-hidden">Account</span>
-                      </a>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="26.51" height="23.443" viewBox="0 0 512 512"><path d="M344 144c-3.92 52.87-44 96-88 96s-84.15-43.12-88-96c-4-55 35-96 88-96s92 42 88 96z" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={32} /><path d="M256 304c-87 0-175.3 48-191.64 138.6C62.39 453.52 68.57 464 80 464h352c11.44 0 17.62-10.48 15.65-21.4C431.3 352 343 304 256 304z" fill="none" stroke="currentColor" strokeMiterlimit={10} strokeWidth={32} /></svg>
+                          <span className="visually-hidden">Account</span>
+                        </a>
                       </Link>
                     </li>
                     <li className="header__account--items header__account2--items d-none d-lg-block">
-                    <Link to="/WishList">
-                      <a className="header__account--btn" href="wishlist.html">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="28.51" height="23.443" viewBox="0 0 512 512"><path d="M352.92 80C288 80 256 144 256 144s-32-64-96.92-64c-52.76 0-94.54 44.14-95.08 96.81-1.1 109.33 86.73 187.08 183 252.42a16 16 0 0018 0c96.26-65.34 184.09-143.09 183-252.42-.54-52.67-42.32-96.81-95.08-96.81z" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={32} /></svg>
-                        <span className="items__count  wishlist style2">02</span>
-                      </a>
+                      <Link to="/WishList">
+                        <a className="header__account--btn" href="wishlist.html">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="28.51" height="23.443" viewBox="0 0 512 512"><path d="M352.92 80C288 80 256 144 256 144s-32-64-96.92-64c-52.76 0-94.54 44.14-95.08 96.81-1.1 109.33 86.73 187.08 183 252.42a16 16 0 0018 0c96.26-65.34 184.09-143.09 183-252.42-.54-52.67-42.32-96.81-95.08-96.81z" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={32} /></svg>
+                          <span className="items__count  wishlist style2">{wishlistCount}</span>
+                        </a>
                       </Link>
                     </li>
                     <li className="header__account--items header__account2--items">
@@ -131,7 +132,7 @@ function App() {
                             </g>
                           </g>
                         </svg>
-                        <span className="items__count style2">02</span>
+                        <span className="items__count style2">03</span>
                       </a>
                     </li>
                   </ul>
@@ -142,19 +143,19 @@ function App() {
         </div>
 
 
-      <Header />
+        <Header />
 
-      <Routes>
-                        <Route path='/' element={ <Home></Home> }/>
-                        <Route path='/Shop' element={  <Shop></Shop>}/>
-                        <Route path='/Contact' element={  <Contact></Contact>}/>
-                        <Route path='/Account' element={  <Account></Account>}/>
-                        <Route path='/WishList' element={ <WishList ></WishList>}/>
-                      </Routes>
+        <Routes>
+          <Route path='/' element={<Home></Home>} />
+          <Route path='/Shop' element={<Shop></Shop>} />
+          <Route path='/Contact' element={<Contact></Contact>} />
+          <Route path='/Account' element={<Account></Account>} />
+          <Route path='/WishList' element={<WishList ></WishList>} />
+        </Routes>
 
-      <Footer />
-    {/*   <NewsLetter /> */}
-      <ScroolBar />
+        <Footer />
+        {/*   <NewsLetter /> */}
+        <ScroolBar />
       </BrowserRouter>
     </div>
   );

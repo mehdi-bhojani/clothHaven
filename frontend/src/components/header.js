@@ -1,9 +1,12 @@
 import React from "react";
+import { useState } from "react";
 
 const Header = () => {
+
+
   return (
         <header className="header__section color-scheme-2">
-        
+
           {/* Start Offcanvas header menu */}
           <div className="offcanvas__header color-scheme-2">
             <div className="offcanvas__inner">
@@ -187,7 +190,7 @@ const Header = () => {
                     </svg>
                   </span>
                   <span className="offcanvas__stikcy--toolbar__label">Wishlist</span>
-                  <span className="items__count">3</span>
+                  <span className="items__count">5</span>
                 </a>
               </li>
             </ul>

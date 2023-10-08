@@ -28,10 +28,7 @@
                 <a href={props.productDetailsLink}>{props.productName}</a>
               </h4>
               <span className="cart__content--variant">
-                COLOR: {props.productColor}
-              </span>
-              <span className="cart__content--variant">
-                WEIGHT: {props.productWeight}
+                 {props.productColor}
               </span>
             </div>
           </div>
