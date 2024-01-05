@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import Rating from './rating';
+// import Rating from './rating';
 import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper/modules';
 import SwiperCore from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -28,9 +28,6 @@ function MiniSlider(props) {
         speed={1000}
         navigation
 
-
-        onSwiper={(swiper) => console.log(swiper)}
-        onSlideChange={() => console.log('slide change')}
       >
 
 
@@ -68,7 +65,7 @@ function MiniSlider(props) {
                   {/* Fixed rating icons */}
                   <li className="rating__list">
                     <span className="rating__list--icon">
-                      <Rating rating={props.rating} />
+                      {/* <Rating rating={props.rating} /> */}
                     </span>
                   </li>
                 </ul>

@@ -7,6 +7,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
+import { NavLink } from 'react-router-dom';
 
 
 SwiperCore.use([Autoplay]);
@@ -34,10 +35,6 @@ function HeroSlider() {
       }}
       speed={1500}
       navigation
-     
-     
-      onSwiper={(swiper) => console.log(swiper)}
-      onSlideChange={() => console.log('slide change')}
     >
       <SwiperSlide><div className="swiper-slide ">
                   <div className="hero__slider--items home2__slider--bg">
@@ -50,11 +47,11 @@ function HeroSlider() {
                               <h2 className="slider__content--maintitle h1">New Collection <br />
                                 Summer Sale</h2>
                               <p className="slider__content--desc desc2 d-sm-2-none mb-40">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do <br /> eiusmod tempor incididunt ut labore et dolore magna</p>
-                              <a className="bg__secondary2 slider__btn primary__btn" href="shop.html">Show Collection
+                              <NavLink className="bg__secondary2 slider__btn primary__btn" to="shop">Show Collection
                                 <svg className="primary__btn--arrow__icon" xmlns="http://www.w3.org/2000/svg" width="20.2" height="12.2" viewBox="0 0 6.2 6.2">
                                   <path d="M7.1,4l-.546.546L8.716,6.713H4v.775H8.716L6.554,9.654,7.1,10.2,9.233,8.067,10.2,7.1Z" transform="translate(-4 -4)" fill="currentColor" />
                                 </svg>
-                              </a>
+                              </NavLink>
                             </div>
                           </div>
                         </div>
@@ -71,11 +68,11 @@ function HeroSlider() {
                           <h2 className="slider__content--maintitle h1">New Collection <br />
                             Summer Sale</h2>
                           <p className="slider__content--desc desc2 d-sm-2-none mb-40">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do <br /> eiusmod tempor incididunt ut labore et dolore magna</p>
-                          <a className="bg__secondary2 slider__btn primary__btn" href="shop.html">Show Collection
+                          <NavLink className="bg__secondary2 slider__btn primary__btn" to="shop">Show Collection
                             <svg className="primary__btn--arrow__icon" xmlns="http://www.w3.org/2000/svg" width="20.2" height="12.2" viewBox="0 0 6.2 6.2">
                               <path d="M7.1,4l-.546.546L8.716,6.713H4v.775H8.716L6.554,9.654,7.1,10.2,9.233,8.067,10.2,7.1Z" transform="translate(-4 -4)" fill="currentColor" />
                             </svg>
-                          </a>
+                          </NavLink>
                         </div>
                       </div>
                     </div>
@@ -90,11 +87,11 @@ function HeroSlider() {
                           <h2 className="slider__content--maintitle h1">New Collection <br />
                             Summer Sale</h2>
                           <p className="slider__content--desc desc2 d-sm-2-none mb-40">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do <br /> eiusmod tempor incididunt ut labore et dolore magna</p>
-                          <a className="bg__secondary2 slider__btn primary__btn" href="shop.html">Show Collection
+                          <NavLink className="bg__secondary2 slider__btn primary__btn" to="shop">Show Collection
                             <svg className="primary__btn--arrow__icon" xmlns="http://www.w3.org/2000/svg" width="20.2" height="12.2" viewBox="0 0 6.2 6.2">
                               <path d="M7.1,4l-.546.546L8.716,6.713H4v.775H8.716L6.554,9.654,7.1,10.2,9.233,8.067,10.2,7.1Z" transform="translate(-4 -4)" fill="currentColor" />
                             </svg>
-                          </a>
+                          </NavLink>
                         </div>
                       </div>
                     </div>
